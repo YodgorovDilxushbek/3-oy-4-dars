@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+}
+
+.container {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* BUTTONGA STIL */
+button {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29.38px;
+    border-radius: 2px;
+    padding: 15px 21px 17px 20px;
+    border: none;
+    background-color: #FF4B4B;
+    position: relative;
+    cursor: pointer;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    border-radius: 2px;
+    transition: border-color 0.3s ease;
+}
+
+button:hover::after {
+    animation: button 2s linear infinite;
+}
+
+@keyframes button {
+    0% {
+        border-color: transparent transparent transparent black;
+    }
+
+    25% {
+        border-color: black transparent transparent transparent;
+    }
+
+    50% {
+        border-color: black black transparent transparent;
+    }
+
+    75% {
+        border-color: transparent black black transparent;
+    }
+
+    100% {
+        border-color: transparent transparent black black;
+    }
+}
+
+
+
+/* A HREFLARGA STILLAR */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    color: #000;
+    font-weight: bold;
+}
+
+a::before,
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+a::before {
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+a::after {
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+}
+
+a:hover::before {
+    transform: scaleX(1);
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    background-color: black;
+    transition-delay: 0.4s;
+}
+
+/* IMG ga stillar */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.05) rotate(2deg);
+    filter: brightness(1.1) contrast(1.2);
+}
+
+img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+img:hover::after {
+    opacity: 1;
+}
+
+
+/* HEADER QISMI */
+
+.header {
+    margin-bottom: 140px;
+    margin-top: 27px;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header__container ul {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+}
+
+.header__container a {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29.38px;
+}
+
+/* HERO QISMI */
+
+.hero {
+    margin-bottom: 71px;
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-left h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #21243D;
+    margin-bottom: 40px;
+}
+
+.hero-left p {
+    margin-bottom: 47px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.5px;
+    color: #21243D;
+}
+
+.hero-left button {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29.38px;
+    border-radius: 2px;
+    padding: 15px 21px 17px 20px;
+    border: none;
+    background-color: #FF6464;
+}
+
+/* INSPECT qismi */
+
+.inspect {
+    background-color: #EDF7FA;
+    padding-top: 7px;
+    padding-bottom: 32px;
+}
+
+.to {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.to h4 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #21243D;
+}
+
+.to a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.5px;
+    color: #00A8CC;
+}
+
+.two {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 50px;
+    margin-left: 160px;
+
+
+}
+
+
+.hard {
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px 0px #BBE1FA40;
+    padding-left: 23px;
+    padding-right: 21px;
+    border-radius: 4px;
+}
+
+.perfect {
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px 0px #BBE1FA40;
+    padding-left: 23px;
+    padding-right: 21px;
+    border-radius: 4px;
+}
+
+.two h2 {
+    margin-top: 24px;
+    margin-bottom: 17px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 38.19px;
+    color: #21243D;
+}
+
+.two h6 {
+    margin-bottom: 11px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.44px;
+    color: #21243D;
+}
+
+.two p {
+    margin-bottom: 7px;
+    color: #21243D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.5px;
+}
+
+/* TITTLE QISMI */
+
+.title {
+    margin-bottom: 28px;
+}
+
+.tittle__container h4 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #21243D;
+    margin-top: 20px;
+}
+
+/* DESIGNER QISMI*/
+
+
+.designer {
+    margin-bottom: 15px;
+}
+
+.designer__container {
+    display: flex;
+    gap: 18px;
+    border-bottom: 1px solid #000;
+}
+
+.des-right h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 44.06px;
+    color: #21243D;
+    margin-bottom: 16px;
+}
+
+.wow {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    margin-bottom: 22px;
+}
+
+.wow button {
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 16px;
+    background-color: #142850;
+}
+
+.wow h5 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29.38px;
+    color: #8695A4;
+}
+
+.des-right p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.5px;
+    color: #21243D;
+}
+
+/* VIBRANT QISMI */
+
+.vibrant {
+    margin-top: 31px;
+    margin-bottom: 15px;
+}
+
+.vibrant__container {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #000;
+}
+
+/* TYPE QISMI */
+
+.type {
+    margin-top: 31px;
+    margin-bottom: 15px;
+}
+
+.type__container {
+    display: flex;
+    gap: 18px;
+    border-bottom:1px solid #000;
+}
+
+/* FOOTER QISMI */
+
+footer{
+    margin-top: 83px;
+    text-align: center;
+}
+
+.footer__container{
+    padding-top: 51px;
+    padding-bottom: 54px;
+}
+
+.logo1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 26px;
+}
+
+.logo2 a{
+font-size: 14px;
+font-weight: 400;
+line-height: 20.56px;
+color: #21243D;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-left h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .hero-left p {
+        text-align: center;
+    }
+
+    .two {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 30px;
+    }
+
+    .two h2 {
+        text-align: center;
+    }
+
+    .two p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__container ul {
+        gap: 20px;
+    }
+
+    .hero-left h1 {
+        font-size: 28px;
+    }
+
+    .two {
+        gap: 20px;
+    }
+
+    .inspect {
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .hard, .perfect {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__container {
+        justify-content: center;
+    }
+
+    .hero-left h1 {
+        font-size: 24px;
+    }
+
+    .hero-left p {
+        font-size: 14px;
+    }
+
+    .two {
+        margin-left: 0;
+    }
+
+    .to {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .vibrant__container,
+    .type__container,
+    .designer__container {
+        flex-direction: column;
+    }
+}
